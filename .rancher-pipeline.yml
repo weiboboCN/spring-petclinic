@@ -1,0 +1,8 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: ./mvnw spring-boot:run
+timeout: 60
+notification: {}
