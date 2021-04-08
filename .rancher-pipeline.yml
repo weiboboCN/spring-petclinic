@@ -3,6 +3,11 @@ stages:
   steps:
   - runScriptConfig:
       image: java:8
-      shellScript: ./mvnw spring-boot:run
+      shellScript: ./mvnw package
+- name: run
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: java -jar target/*.jar
 timeout: 60
 notification: {}
